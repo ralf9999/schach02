@@ -1,0 +1,451 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2{margin: 0px 2px 5px 5px;}
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1.25rem max-content max-content; /* Umrechnung von 20px in rem */
+    grid-template-rows: 1.25rem max-content max-content; /* Umrechnung von 20px in rem */
+    gap: 1.25rem 0.625rem; /* Umrechnung von 20px 10px in rem */
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Nummer Alphabet Partiezuege"
+      "Nummer Schachbrett Partiezuege"
+      "eingabe eingabe eingabe";
+    overflow-x: hidden;
+    min-width: 100%;
+  }
+  
+  
+  
+  /* ********************************
+   *         Schachbrett            *
+   **********************************/   
+  
+  
+  .Nummer { grid-area: Nummer; }
+  
+  .Schachbrett { 
+    grid-area: Schachbrett;
+    width: max-content;
+    margin-top: -10px;
+    margin-left: -4px;
+  }
+  
+  
+  .Alphabet { 
+    grid-area: Alphabet; 
+    margin: 0px;
+    margin-left: -4px;
+  }
+  
+  
+  table {
+    margin-top: 0; 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+  }
+  th{background-color: #a4eba4; color: #000;}
+  table tbody tr td:nth-child(1) {
+    background-color: #F7F6F5; 
+  }
+  table tbody tr td:nth-child(2) {
+    background-color: #D1E4F6; 
+    color: black;
+  }
+  
+  
+  .buchstaben{
+    display:flex;
+    align-items: flex-start;
+  }
+  
+  .zahlen {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -20px; 
+  }
+  
+  .cell {
+    width: 1fr; 
+    height: 1fr; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Unicode MS", sans-serif;
+    font-size: 1.5rem; /* (24px ÷ 16px) = 1.5rem */
+    background-color: #ebebeb; /* Farbe für die weißen Zellen */
+  }
+  
+  .black {
+  background-color: #808080; /* Farbe fÃ¼r die schwarzen Zellen */
+  color: #fff; /* Textfarbe auf den schwarzen Zellen */
+  }
+  
+  .chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 8 Spalten im Verhältnis zur verfügbaren Breite */
+    grid-template-rows: repeat(8, 1fr); /* 8 Zeilen im Verhältnis zur verfügbaren Höhe */
+    width: 90%; /* Breite auf 90% der Bildschirmbreite setzen */
+  }
+  
+  .buchstaben div, .zahlen div {
+   display: flex;
+   justify-content: center;
+   font-size: 1.25rem; /* (20px ÷ 16px) = 1.25rem */
+   font-weight: bold;
+  }
+  
+  .buchstaben div {
+    width: 3.125rem; /* Umrechnung von 50px in rem */
+    height: 1.875rem; /* Umrechnung von 30px in rem */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .zahlen div {
+    width: 3.125rem; /* Umrechnung von 50px in rem */
+    height: 3.125rem; /* Umrechnung von 50px in rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .cell {
+    width: 3.125rem; /* Umrechnung von 50px in rem */
+    height: 3.125rem; /* Umrechnung von 50px in rem */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Unicode MS", sans-serif;
+    font-size: 1.5rem; /* (24px ÷ 16px) = 1.5rem */
+    background-color: #ebebeb; /* Farbe für die weißen Zellen */
+  }
+  
+  
+  .black {
+  background-color: #808080; /* Farbe fÃ¼r die schwarzen Zellen */
+  color: #fff; /* Textfarbe auf den schwarzen Zellen */
+  }
+  
+  .chessboard {
+        display: grid;
+        grid-template-columns: repeat(8, 50px); /* 8 Spalten Ã  50px Breite */
+        grid-template-rows: repeat(8, 50px); /* 8 Zeilen Ã  50px HÃ¶he */
+        width: 90%; 
+    }
+  
+  .buchstaben div, .zahlen div {
+     display: flex;
+     justify-content: center;
+     font-size: 1.25rem; /* (20px ÷ 16px) = 1.25rem */
+     font-weight: bold;
+     background-color: #e8cba1;
+   }
+  
+   .buchstaben div {
+    width: 3.125rem; /* Umrechnung von 50px in rem */
+    height: 1.875rem; /* Umrechnung von 30px in rem */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .buchstaben div, .zahlen div {
+   display: flex;
+   justify-content: center;
+   font-size: 1.25rem; /* (20px ÷ 16px) = 1.25rem */
+   font-weight: bold;
+  }
+    
+  /* ********************************
+   *         Schachfiguren          *
+   **********************************/   
+  
+  .turm_weis {
+    background-image: url("turm_weis.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .springer_weis {
+  background-image: url("springer_weis.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .laeufer_weis {
+  background-image: url("laeufer_weis.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .dame_weis {
+  background-image: url("dame_weis.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .koenig_weis {
+  background-image: url("koenig_weis.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .bauer_weis {
+  background-image: url("bauer_weis.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .turm_schwarz {
+  background-image: url("turm_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .springer_schwarz {
+  background-image: url("springer_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .laeufer_schwarz {
+  background-image: url("laeufer_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .dame_schwarz {
+  background-image: url("dame_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .koenig_schwarz {
+  background-image: url("koenig_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  .bauer_schwarz {
+  background-image: url("bauer_schwarz.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  
+  
+  /* ********************************
+   *         Zugeingabe             *
+   **********************************/
+  
+  .group-box-zugeingabe {
+    grid-area:eingabe;
+    width:100%;
+
+  }
+  .groupZugeingabe{
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    margin: 0 0.4rem;
+}
+.groupZugeingabe h2{
+    display: block;
+    margin-bottom: 1rem;
+}
+  .grid-zugeingabe{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    gap:10px 30px;
+  }
+  
+  
+  
+  .input-container {
+    display: flex; /* Elemente in den Input-Containern in einer Zeile anordnen */
+    align-items: center; /* Zentrieren Sie die Elemente vertikal in den Containern */
+    width: 150px;
+  }
+  
+  
+  label::first-letter {
+    text-decoration: underline;
+  }
+  
+  .zeichen-unerstreichen{
+    text-decoration: underline;
+  }
+  
+  
+  input{height: 3.5rem;width: 2rem; margin: 0px 0px 0px 0px;}
+  button{color: white; background-color: blue;height: 3.5rem;width: 7rem}
+  #fileInputLabel {
+    cursor: pointer;
+  }
+  
+  
+  /* ********************************
+   *         Partiezüge             *
+   **********************************/
+  
+  
+   .Partiezuege-Container {
+    grid-area: Partiezuege;
+    width: 100%;
+  }
+  
+  .partiezuegeWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    background-color: #f5f5f5;
+    padding: 0 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+
+  .Partiezuege {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 95%;
+    height: 12.5rem; /* (200px ÷ 16px) = 12.5rem */
+    overflow: auto;
+    border: solid 2px black;
+    border-style: ridge;
+    border-radius: 10px;
+    padding: 2px;
+  }
+  
+  .import-export-button {
+    margin: 5px 0px 5px 0px;
+  }
+  
+  .button-container {
+    display: flex; /* Verwendet Flexbox-Layout */
+  }
+  
+  .zug-button {
+    width: 3.5rem;
+    margin: 5px;
+  }
+  
+  #fileInput[type="file"] {
+    display: none;
+  }
+  
+  /* ********************************
+   *         Media Queries          *
+   **********************************/
+  
+   @media (max-width:438px){
+    .container {
+        display: grid;
+        grid-template-columns: 1.25rem max-content; /* Umrechnung von 20px in rem */
+        grid-template-rows: 1.25rem max-content max-content max-content; /* Umrechnung von 20px in rem */
+        gap: 1.25rem 0.625rem; /* Umrechnung von 20px 10px in rem */
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Nummer Alphabet "
+          "Nummer Schachbrett"
+          "eingabe eingabe"
+          "Partiezuege Partiezuege";
+        overflow-y: hidden;
+        min-width: 100%;
+      }
+  
+    /* .Partiezuege-Container {
+       min-width: 100%;
+      } */
+  }
+  
+  
+  @media (max-width: 1079px) {
+      .container {
+          display: grid;
+          grid-template-columns: 1.25rem 100%;
+          /* Umrechnung von 20px in rem */
+          grid-template-rows: 1.25rem max-content max-content max-content;
+          /* Umrechnung von 20px in rem */
+          gap: 1.25rem 0.625rem;
+          /* Umrechnung von 20px 10px in rem */
+          grid-auto-flow: row;
+          grid-template-areas:
+              "Nummer Alphabet "
+              "Nummer Schachbrett"
+              "eingabe eingabe"
+              "Partiezuege Partiezuege";
+          overflow-y: hidden;
+      }
+
+      .Schachbrett {
+          min-width: max-content;
+          /* Setze die Breite auf 100% des verfügbaren Platzes */
+      }
+
+      .chessboard {
+          display: grid;
+          grid-template-columns: repeat(8, 1fr);
+          /* 8 Spalten im Verhältnis zur verfügbaren Breite */
+          grid-template-rows: repeat(8, 1fr);
+          /* 8 Zeilen im Verhältnis zur verfügbaren Höhe */
+          min-width: max-content;
+      }
+
+
+      .group-box-zugeingabe {
+          display: block;
+          padding: 0 1rem;
+      }
+
+      .groupZugeingabe {
+          width: 94%;
+          background-color: yellow;
+          padding: 1rem;
+      }
+
+      .Partiezuege-Container {
+          width: 100%;
+          display: block;
+          justify-content: center;
+          margin: 0 auto;
+      }
+
+      .partiezuegeWrapper {
+          width: 96%;
+          margin: 0;
+          background-color: #f5f5f5;
+          display: block;
+          margin: 0 auto;
+      }
+
+      .Partiezuege {
+          width: 100%;
+      }
+  }
+  
+  
+  /* ********************************
+   *         Barrierefreiheit       *
+   **********************************/
+  
+  input:focus, input:focus {background-color: yellow;}  
+  button:focus, button:focus {background-color: yellow; color: #000;} 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="schachspielContainer">
+        <div class="schachbrettArea">
+            <div class="nummer">
+                <div class="zahlen">
+                    <div></div>
+                    <div>8</div>
+                    <div>7</div>
+                    <div>6</div>
+                    <div>5</div>
+                    <div>4</div>
+                    <div>3</div>
+                    <div>2</div>
+                    <div>1</div>
+                </div>
+            </div>
+            <div class="schachbrett">
+                <div class="chessboard">
+                    <!-- Zeile 8 -->
+                    <div class="cell" data-coordinates="a8"></div>
+                    <div class="cell black" data-coordinates="b8"></div>
+                    <div class="cell" data-coordinates="c8"></div>
+                    <div class="cell black" data-coordinates="d8"></div>
+                    <div class="cell" data-coordinates="e8"></div>
+                    <div class="cell black" data-coordinates="f8"></div>
+                    <div class="cell" data-coordinates="g8"></div>
+                    <div class="cell black" data-coordinates="h8"></div>
+        
+                    <!-- Zeile 7 -->
+                    <div class="cell black" data-coordinates="a7"></div>
+                    <div class="cell" data-coordinates="b7"></div>
+                    <div class="cell black" data-coordinates="c7"></div>
+                    <div class="cell" data-coordinates="d7"></div>
+                    <div class="cell black" data-coordinates="e7"></div>
+                    <div class="cell" data-coordinates="f7"></div>
+                    <div class="cell black" data-coordinates="g7"></div>
+                    <div class="cell" data-coordinates="h7"></div>
+        
+                    <!-- Zeile 6 -->
+                    <div class="cell" data-coordinates="a6"></div>
+                    <div class="cell black" data-coordinates="b6"></div>
+                    <div class="cell" data-coordinates="c6"></div>
+                    <div class="cell black" data-coordinates="d6"></div>
+                    <div class="cell" data-coordinates="e6"></div>
+                    <div class="cell black" data-coordinates="f6"></div>
+                    <div class="cell" data-coordinates="g6"></div>
+                    <div class="cell black" data-coordinates="h6"></div>
+        
+                    <!-- Zeile 5 -->
+                    <div class="cell black" data-coordinates="a5"></div>
+                    <div class="cell" data-coordinates="b5"></div>
+                    <div class="cell black" data-coordinates="c5"></div>
+                    <div class="cell" data-coordinates="d5"></div>
+                    <div class="cell black" data-coordinates="e5"></div>
+                    <div class="cell" data-coordinates="f5"></div>
+                    <div class="cell black" data-coordinates="g5"></div>
+                    <div class="cell" data-coordinates="h5"></div>
+        
+                    <!-- Zeile 4 -->
+                    <div class="cell" data-coordinates="a4"></div>
+                    <div class="cell black" data-coordinates="b4"></div>
+                    <div class="cell" data-coordinates="c4"></div>
+                    <div class="cell black" data-coordinates="d4"></div>
+                    <div class="cell" data-coordinates="e4"></div>
+                    <div class="cell black" data-coordinates="f4"></div>
+                    <div class="cell" data-coordinates="g4"></div>
+                    <div class="cell black" data-coordinates="h4"></div>
+        
+                    <!-- Zeile 3 -->
+                    <div class="cell black" data-coordinates="a3"></div>
+                    <div class="cell" data-coordinates="b3"></div>
+                    <div class="cell black" data-coordinates="c3"></div>
+                    <div class="cell" data-coordinates="d3"></div>
+                    <div class="cell black" data-coordinates="e3"></div>
+                    <div class="cell" data-coordinates="f3"></div>
+                    <div class="cell black" data-coordinates="g3"></div>
+                    <div class="cell" data-coordinates="h3"></div>
+        
+                    <!-- Zeile 2 -->
+                    <div class="cell" data-coordinates="a2"></div>
+                    <div class="cell black" data-coordinates="b2"></div>
+                    <div class="cell" data-coordinates="c2"></div>
+                    <div class="cell black" data-coordinates="d2"></div>
+                    <div class="cell" data-coordinates="e2"></div>
+                    <div class="cell black" data-coordinates="f2"></div>
+                    <div class="cell" data-coordinates="g2"></div>
+                    <div class="cell black" data-coordinates="h2"></div>
+        
+                    <!-- Zeile 1 -->
+                    <div class="cell black" data-coordinates="a1"></div>
+                    <div class="cell" data-coordinates="b1"></div>
+                    <div class="cell black" data-coordinates="c1"></div>
+                    <div class="cell" data-coordinates="d1"></div>
+                    <div class="cell black" data-coordinates="e1"></div>
+                    <div class="cell" data-coordinates="f1"></div>
+                    <div class="cell black" data-coordinates="g1"></div>
+                    <div class="cell" data-coordinates="h1"></div>
+                </div>
+            </div>
+            <div class="alphabet">
+                <div class="buchstaben">
+                    <div>A</div>
+                    <div>B</div>
+                    <div>C</div>
+                    <div>D</div>
+                    <div>E</div>
+                    <div>F</div>
+                    <div>G</div>
+                    <div>H</div>
+                </div>
+            </div>
+        </div>
+        <div class ="group-box-zugeingabe">
+            <div class="groupZugeingabe">
+            <h2>Zugeingabe</h2>
+            <div class="grid-zugeingabe">
+                <div class="input-container">
+                  <label for="vonFeld" accesskey="v">Von Feld:</label>
+                  <input type="text" id="vonFeld" name="vonFeld" size="5" aria-label="Geben Sie ein von welchem Feld eine Figur ziehen soll" title="Geben Sie ein von welchem Feld eine Figur ziehen soll">
+                </div>
+                    
+                <div class="input-container">
+                  <label for="zuFeld" accesskey="z">Zu Feld:</label>
+                  <input type="text" id="zuFeld" name="zuFeld" size="5" aria-label="Geben Sie ein zu welchem Feld eine Figur ziehen soll" title="Geben Sie ein zu welchem Feld eine Figur ziehen soll" >
+                </div>
+              
+                <button id="zugButton" accesskey="u" aria-label="Figur ziehen" title="Figur ziehen">Fig<span class="zeichen-unerstreichen">u</span>r ziehen</button>
+              </div>
+            </div>
+        </div>
+  
+        <div class="partiezuege-container">
+            <div class="partiezuegeWrapper">
+                <button id="exportButton" class="import-export-button">Export als PGN</button>
+                <input type="file" id="fileInput" accept=".pgn">
+                <button id="importButton" class="import-export-button">Import PGN</button>
+                <div class="partiezuege">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nr.</th>
+                                <th>Weiß</th>
+                                <th>Schwarz</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabellenBody">
+        
+                        </tbody>
+                    </table>
+                </div>
+                <div class="button-container">
+                    <button id="zugZurueck" class="zug-button" accesskey="o">&lt;&lt;</button>
+                    <button id="zugVor" class="zug-button" accesskey="o">&gt;&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div> <!--container-->
+    
+    </div>
+</body>
+</html>
