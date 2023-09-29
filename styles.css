@@ -346,12 +346,12 @@ h2 {
 .buchstaben div {
     width: 2.5rem; /* Umrechnung von 50px in rem */
     height: 2.5rem;/* Umrechnung von 50px in rem */
-
+  }
     .alphabet {
         overflow: hidden;
         display: flex;
     }
-}
+  }
 @media (max-width: 1079px) {
     .schachspielContainer {
         display: grid;
